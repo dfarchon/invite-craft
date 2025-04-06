@@ -1,11 +1,14 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
-import Footer from './components/Footer'
 import Header from './components/Header'
 import ImageGenerate from './components/ImageGenerate'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('generate');
+
+  useEffect(() => {
+    setCurrentPage('generate');
+  }, []);
 
   return (
     <div className="min-h-screen bg-white" style={{ paddingTop: '80px' }}>
